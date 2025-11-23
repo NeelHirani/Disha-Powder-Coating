@@ -1,5 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, Button } from "@/components/UIComponents";
 import { Star, Quote, ArrowRight, Users, Award, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
@@ -7,7 +6,7 @@ import { Link } from "wouter";
 export default function Testimonials() {
   const testimonials = [
     {
-      name: "Rajesh Kumar",
+      name: "Manoj Bavaria",
       company: "Auto Parts Manufacturing",
       rating: 5,
       text: "Excellent service and quality. The powder coating on our automotive parts is flawless and durable. Disha Powder Coating has been our go-to partner for over 3 years.",
@@ -195,48 +194,9 @@ export default function Testimonials() {
         </div>
       </section>
 
-      {/* VIDEO TESTIMONIALS SECTION */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Video Testimonials</h2>
-            <p className="text-xl text-gray-600">Hear directly from our clients in their own words</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                className="relative rounded-xl overflow-hidden shadow-lg aspect-video bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center group cursor-pointer"
-              >
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
-                <div className="text-center space-y-3 relative z-10">
-                  <motion.div
-                    whileHover={{ scale: 1.2 }}
-                    className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto shadow-lg"
-                  >
-                    <div className="w-0 h-0 border-t-8 border-t-transparent border-l-12 border-l-orange-600 border-b-8 border-b-transparent ml-1"></div>
-                  </motion.div>
-                  <p className="text-white font-semibold">Video Testimonial</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* TRUSTED BRANDS SECTION */}
-      <section className="py-20 px-6 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <section className="py-20 px-6 bg-blue-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -244,8 +204,8 @@ export default function Testimonials() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Trusted By Industry Leaders</h2>
-            <p className="text-xl text-blue-100">Partnering with leading companies across multiple sectors</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Trusted By Industry Leaders</h2>
+            <p className="text-xl text-slate-600">Partnering with leading companies across multiple sectors</p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -258,104 +218,12 @@ export default function Testimonials() {
                 transition={{ delay: index * 0.05 }}
                 whileHover={{ scale: 1.05 }}
               >
-                <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-lg p-6 flex items-center justify-center hover:from-white/20 hover:to-white/10 transition-all duration-300 border border-white/10 h-24">
-                  <p className="text-white font-semibold text-center text-sm leading-relaxed">{company}</p>
+                <div className="bg-white border border-blue-200 rounded-lg p-6 flex items-center justify-center hover:shadow-md transition-all duration-300 h-24">
+                  <p className="text-slate-700 font-semibold text-center text-sm leading-relaxed">{company}</p>
                 </div>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* FEATURED TESTIMONIAL */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-          >
-            <Card className="p-12 border-0 shadow-2xl bg-gradient-to-br from-blue-50 to-orange-50">
-              <CardContent className="p-0">
-                <div className="flex flex-col md:flex-row gap-12 items-center">
-                  {/* Quote */}
-                  <div className="md:w-1/2 space-y-6">
-                    <Quote size={48} className="text-orange-500" />
-                    <blockquote className="text-2xl md:text-3xl font-medium text-slate-900 leading-tight">
-                      "Disha Powder Coating transformed our production quality. Not only are the coatings durable, but their customer service is exceptional."
-                    </blockquote>
-                    <div className="space-y-2 pt-6">
-                      <p className="font-bold text-lg text-slate-900">Rajesh Kumar</p>
-                      <p className="text-gray-600">Founder, Auto Parts Manufacturing</p>
-                      <div className="flex space-x-1 pt-2">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} size={20} className="fill-yellow-400 text-yellow-400" />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Image */}
-                  <div className="md:w-1/2">
-                    <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
-                      alt="Rajesh Kumar"
-                      className="w-full rounded-2xl shadow-xl"
-                    />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section className="py-20 px-6 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }}></div>
-        </div>
-
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
-          >
-            Join Our Satisfied Clients
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl mx-auto"
-          >
-            Experience the quality and service that has earned us hundreds of 5-star reviews and long-term partnerships
-          </motion.p>
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Link to="/quote">
-              <Button className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-6 text-lg rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 font-semibold">
-                Get Started Today
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-6 text-lg rounded-lg transition-all duration-300 font-semibold flex items-center justify-center gap-2">
-                Contact Us
-                <ArrowRight size={20} />
-              </Button>
-            </Link>
-          </motion.div>
         </div>
       </section>
     </div>

@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, Twitter, ArrowRight, Sparkles, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/UIComponents";
 import { motion } from "framer-motion";
 
 const currentYear = new Date().getFullYear();
@@ -48,7 +48,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden mt-20">
+    <footer className="relative overflow-hidden mt-0">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900" />
       

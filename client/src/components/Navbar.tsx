@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, Quote, ArrowRight, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Button, Sheet, SheetContent, SheetTrigger } from "@/components/UIComponents";
 import { motion } from "framer-motion";
 
 export default function Navbar() {

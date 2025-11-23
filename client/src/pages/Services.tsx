@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, Button, Badge } from "@/components/UIComponents";
 import { Wrench, Palette, Sparkles, Shield, Zap, Package, ArrowRight, CheckCircle } from "lucide-react";
 import colorSamplesImage from "@assets/generated_images/Powder_coating_color_samples_05f3c29b.png";
 
@@ -13,7 +11,7 @@ export default function Services() {
       title: "Custom Powder Coating",
       description: "Professional powder coating services tailored to your specific requirements with a variety of colors and finishes.",
       materials: ["Steel", "Aluminum", "Stainless Steel", "Galvanized Metal"],
-      finishes: ["Gloss", "Matte", "Satin", "Textured"],
+      finishes: ["Gloss", "Matte", "Satin"],
       color: "from-blue-500 to-blue-600"
     },
     {
@@ -21,7 +19,7 @@ export default function Services() {
       title: "Color Matching",
       description: "Precision color matching to meet your exact specifications using advanced color analysis technology.",
       materials: ["RAL Colors", "Pantone Colors", "Custom Colors", "Metallic Shades"],
-      finishes: ["Standard", "Metallic", "Pearl", "Chrome Effect"],
+      finishes: ["Standard", "Metallic", "Pearl"],
       color: "from-orange-500 to-orange-600"
     },
     {

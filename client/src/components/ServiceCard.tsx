@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+import { Card } from "@/components/UIComponents";
 import { LucideIcon } from "lucide-react";
 
 interface ServiceCardProps {

@@ -4,10 +4,11 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+  Card,
+  CardContent,
+  Button,
+  Input,
+} from "@/components/UIComponents";
 import { Search, HelpCircle, ArrowRight, Zap, Shield, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";

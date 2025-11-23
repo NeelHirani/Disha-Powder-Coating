@@ -1,6 +1,5 @@
-import { Card } from "@/components/ui/card";
+import { Card, Avatar, AvatarFallback, AvatarImage } from "@/components/UIComponents";
 import { Star } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 interface TestimonialCardProps {
   name: string;

@@ -1,5 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, Button } from "@/components/UIComponents";
 import { Car, Factory, Sofa, Building, Wrench, ArrowRight, CheckCircle, Zap } from "lucide-react";
 import automotiveImage from "@assets/generated_images/Automotive_powder_coating_showcase_e1261c19.png";
 import furnitureImage from "@assets/generated_images/Furniture_powder_coating_example_2d9a40fe.png";

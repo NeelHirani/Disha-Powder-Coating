@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/UIComponents";
 import { Link } from "wouter";
 import heroImage from "@assets/generated_images/Powder_coating_workshop_hero_d77b1d0b.png";
 
