@@ -29,7 +29,7 @@ export default function Industries() {
       title: "Industrial Machinery",
       description: "Robust protective coatings for industrial equipment that withstand harsh environments, chemicals, and extreme temperatures.",
       image: industrialImage,
-      color: "from-orange-500 to-orange-600",
+      color: "from-blue-500 to-blue-700",
       services: [
         "Heavy machinery components",
         "Manufacturing equipment",
@@ -157,7 +157,7 @@ export default function Industries() {
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
             Industries We
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-blue-700">
               Serve
             </span>
           </h1>
@@ -208,7 +208,7 @@ export default function Industries() {
                         <div className="space-y-2">
                           {industry.services.map((service, idx) => (
                             <div key={idx} className="flex items-center gap-3">
-                              <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                               <span className="text-gray-700">{service}</span>
                             </div>
                           ))}
@@ -221,7 +221,7 @@ export default function Industries() {
                           <motion.span
                             key={idx}
                             whileHover={{ scale: 1.05 }}
-                            className="px-4 py-2 bg-gradient-to-r from-orange-100 to-orange-50 text-orange-700 rounded-full text-sm font-medium border border-orange-200"
+                            className="px-4 py-2 bg-gradient-to-r from-blue-100 to-blue-50 text-blue-800 rounded-full text-sm font-medium border border-blue-200"
                           >
                             ✓ {standard}
                           </motion.span>
@@ -329,7 +329,7 @@ export default function Industries() {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
                   </div>
                   <CardContent className="p-6 space-y-3">
-                    <div className="inline-block px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">
+                    <div className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                       {caseStudy.industry}
                     </div>
                     <h3 className="text-xl font-bold text-slate-900">{caseStudy.project}</h3>

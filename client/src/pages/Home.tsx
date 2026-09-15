@@ -88,10 +88,10 @@ export default function Home() {
                 transition={{ duration: 1, delay: 0.2 }}
                 className="mb-4"
               >
-                <span className="inline-block text-orange-500 text-sm md:text-base font-light tracking-[0.3em] uppercase">
-                  Premium Powder Coating Since 1998
+                <span className="inline-block text-blue-500 text-sm md:text-base font-light tracking-[0.3em] uppercase">
+                  Premium Powder Coating Since 2010
                 </span>
-                <div className="w-24 h-px bg-gradient-to-r from-orange-500 to-transparent mt-3"></div>
+                <div className="w-24 h-px bg-gradient-to-r from-blue-500 to-transparent mt-3"></div>
               </motion.div>
 
               <motion.h1
@@ -101,7 +101,7 @@ export default function Home() {
                 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-tight"
               >
                 <span className="block">Built Tough.</span>
-                <span className="inline-block text-orange-500">Finished Flawless.</span>
+                <span className="inline-block text-blue-500">Finished Flawless.</span>
               </motion.h1>
 
               <motion.p
@@ -110,7 +110,7 @@ export default function Home() {
                 transition={{ duration: 1, delay: 0.6 }}
                 className="text-xl md:text-2xl text-gray-200 font-light mt-6 max-w-2xl"
               >
-                Where every piece tells a story of <span className="text-orange-400 font-medium">craftsmanship</span> and <span className="text-orange-400 font-medium">unmatched quality</span>.
+                Where every piece tells a story of <span className="text-amber-400 font-medium">craftsmanship</span> and <span className="text-amber-400 font-medium">unmatched quality</span>.
               </motion.p>
 
               <motion.div
@@ -121,10 +121,10 @@ export default function Home() {
               >
                 <Link
                   to="/quote"
-                  className="group relative inline-flex items-center px-8 py-5 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold text-lg rounded-full shadow-2xl overflow-hidden border border-orange-400 hover:shadow-orange-500/50 transform hover:scale-105 transition-all duration-300"
+                  className="group relative inline-flex items-center px-8 py-5 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold text-lg rounded-full shadow-2xl overflow-hidden border border-amber-400 hover:shadow-blue-500/50 transform hover:scale-105 transition-all duration-300"
                 >
                   <span className="relative z-10">Get Started →</span>
-                  <div className="absolute inset-0 bg-orange-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </Link>
               </motion.div>
             </div>
@@ -137,14 +137,14 @@ export default function Home() {
             <button
               key={i}
               onClick={() => setBgImageIndex(i)}
-              className={`h-2 rounded-full transition-all ${i === bgImageIndex ? "w-10 bg-orange-500" : "w-2 bg-white/50 hover:bg-white/80"}`}
+              className={`h-2 rounded-full transition-all ${i === bgImageIndex ? "w-10 bg-blue-500" : "w-2 bg-white/50 hover:bg-white/80"}`}
             />
           ))}
         </div>
       </section>
 
       {/* STATS */}
-      <section className="py-16 bg-gradient-to-r from-orange-600 to-amber-600">
+      <section className="py-16 bg-gradient-to-r from-blue-700 to-amber-600">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => (
@@ -160,7 +160,7 @@ export default function Home() {
                   <stat.icon size={36} className="text-white" />
                 </div>
                 <div className="text-4xl font-black text-white">{stat.value}</div>
-                <div className="text-orange-100 text-sm font-medium mt-1">{stat.label}</div>
+                <div className="text-blue-100 text-sm font-medium mt-1">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -185,8 +185,8 @@ export default function Home() {
                 whileHover={{ y: -8 }}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all p-8 border border-gray-100"
               >
-                <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-5">
-                  <s.icon className="w-8 h-8 text-orange-600" />
+                <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5">
+                  <s.icon className="w-8 h-8 text-blue-700" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{s.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{s.description}</p>
@@ -200,15 +200,17 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">See the Transformation</h2>
-          <motion.img
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            src={beforeAfterImage}
-            alt="Before → After"
-            className="rounded-2xl shadow-2xl mx-auto max-w-5xl"
-          />
-          <div className="mt-10">
-            <Link to="/gallery" className="inline-block px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg">
+          <div className="w-full max-w-5xl mx-auto mb-10">
+            <motion.img
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              src={beforeAfterImage}
+              alt="Before → After"
+              className="rounded-2xl shadow-2xl w-full h-auto"
+            />
+          </div>
+          <div>
+            <Link to="/gallery" className="inline-block px-8 py-4 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-lg">
               View Full Gallery →
             </Link>
           </div>
@@ -227,13 +229,13 @@ export default function Home() {
                 <span className="text-gray-700 font-medium">{c}</span>
               </motion.div>
             ))}
-            <Link to="/about" className="mt-8 inline-block px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg">
+            <Link to="/about" className="mt-8 inline-block px-8 py-4 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-lg">
               Learn More About Us →
             </Link>
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} className="relative">
             <img src="https://images.unsplash.com/photo-1573506154555-62ee33ed5c61?w=800" alt="Workshop" className="rounded-2xl shadow-2xl" />
-            <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-gradient-to-tr from-orange-400 to-amber-500 rounded-3xl -z-10"></div>
+            <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-gradient-to-tr from-amber-400 to-amber-500 rounded-3xl -z-10"></div>
           </motion.div>
         </div>
       </section>
@@ -250,9 +252,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ scale: 1.1 }}
-                className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-10 hover:from-orange-100 hover:to-amber-100 transition-all"
+                className="bg-gradient-to-br from-blue-50 to-amber-50 rounded-2xl p-10 hover:from-blue-100 hover:to-amber-100 transition-all"
               >
-                <ind.icon className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                <ind.icon className="w-12 h-12 text-blue-700 mx-auto mb-4" />
                 <p className="font-bold text-lg text-gray-800">{ind.title}</p>
               </motion.div>
             ))}
@@ -263,14 +265,14 @@ export default function Home() {
       {/* TRUST BAR – Lightweight Social Proof */}
       <section className="py-16 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-orange-400 font-bold tracking-wider uppercase mb-6">Trusted by 500+ Businesses Nationwide</p>
+          <p className="text-amber-400 font-bold tracking-wider uppercase mb-6">Trusted by 500+ Businesses Nationwide</p>
           <div className="flex flex-wrap justify-center gap-10 text-gray-300">
-            <div className="flex items-center gap-3"><Car size={24} className="text-orange-500" /> Automotive Leaders</div>
-            <div className="flex items-center gap-3"><Factory size={24} className="text-orange-500" /> Industrial Giants</div>
-            <div className="flex items-center gap-3"><Building size={24} className="text-orange-500" /> Top Architects</div>
-            <div className="flex items-center gap-3"><Award size={24} className="text-orange-500" /> 15+ Years Excellence</div>
+            <div className="flex items-center gap-3"><Car size={24} className="text-blue-500" /> Automotive Leaders</div>
+            <div className="flex items-center gap-3"><Factory size={24} className="text-blue-500" /> Industrial Giants</div>
+            <div className="flex items-center gap-3"><Building size={24} className="text-blue-500" /> Top Architects</div>
+            <div className="flex items-center gap-3"><Award size={24} className="text-blue-500" /> 15+ Years Excellence</div>
           </div>
-          <Link to="/testimonials" className="mt-8 inline-block text-orange-400 hover:text-orange-300 underline underline-offset-4">
+          <Link to="/testimonials" className="mt-8 inline-block text-amber-400 hover:text-blue-300 underline underline-offset-4">
             See what our clients say →
           </Link>
         </div>
@@ -297,7 +299,7 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link to="/quote">
-              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 text-lg rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              <Button className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-6 text-lg rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 Get Free Quote
                 <ArrowRight className="ml-2" size={20} />
               </Button>
@@ -312,13 +314,16 @@ export default function Home() {
       </section>
 
       {/* MOBILE STICKY CTA */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-2xl md:hidden z-50">
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-2xl md:hidden z-40">
         <Link to="/quote" className="block">
-          <button className="w-full py-4 bg-orange-600 hover:bg-orange-700 text-white text-lg font-bold rounded-lg shadow-lg">
+          <button className="w-full py-4 bg-blue-700 hover:bg-blue-800 text-white text-lg font-bold rounded-lg shadow-lg">
             Get Quote Now
           </button>
         </Link>
       </div>
+
+      {/* Add padding to prevent footer overlap on mobile */}
+      <div className="h-20 md:hidden" />
     </div>
   );
 }

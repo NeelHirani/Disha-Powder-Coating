@@ -12,29 +12,29 @@
         --popover: 0 0% 100%;
         --popover-foreground: 222 47% 11%;
         --popover-border: 214 20% 90%;
-        --primary: 24 95% 53%;
+        --primary: 217 91% 60%;
         --primary-foreground: 0 0% 100%;
-        --primary-border: hsl(21 90% 48%);
-        --secondary: 210 40% 96%;
-        --secondary-foreground: 222 47% 11%;
-        --secondary-border: hsl(214 20% 88%);
+        --primary-border: hsl(217 91% 55%);
+        --secondary: 142 76% 36%;
+        --secondary-foreground: 0 0% 100%;
+        --secondary-border: hsl(142 76% 31%);
         --muted: 210 20% 96%;
         --muted-foreground: 215 16% 42%;
         --muted-border: hsl(214 20% 90%);
-        --accent: 24 95% 96%;
-        --accent-foreground: 21 90% 38%;
-        --accent-border: hsl(24 90% 88%);
+        --accent: 217 95% 96%;
+        --accent-foreground: 217 91% 40%;
+        --accent-border: hsl(217 90% 88%);
         --destructive: 0 84.2% 60.2%;
         --destructive-foreground: 0 0% 98%;
         --destructive-border: hsl(0 84% 50%);
         --border: 214 20% 90%;
         --input: 214 20% 90%;
-        --ring: 24 95% 53%;
-        --chart-1: 24 95% 53%;
-        --chart-2: 222 47% 11%;
+        --ring: 217 91% 60%;
+        --chart-1: 217 91% 60%;
+        --chart-2: 142 76% 36%;
         --chart-3: 215 16% 42%;
-        --chart-4: 32 95% 44%;
-        --chart-5: 24 80% 62%;
+        --chart-4: 221 83% 53%;
+        --chart-5: 217 80% 68%;
         --radius: 0.85rem;
     }
 }
@@ -55,14 +55,14 @@
     }
 
     ::selection {
-        background: hsl(24 95% 53% / 0.22);
+        background: hsl(217 91% 60% / 0.22);
         color: hsl(222 47% 11%);
     }
 }
 
 @layer components {
     .icon-tile {
-        @apply flex h-12 w-12 items-center justify-center rounded-xl bg-orange-50 text-orange-600;
+        @apply flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600;
     }
 }
 

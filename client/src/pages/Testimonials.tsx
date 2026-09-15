@@ -53,7 +53,7 @@ export default function Testimonials() {
     { icon: Users, label: "Happy Clients", value: "500+", color: "from-blue-500 to-blue-600" },
     { icon: Star, label: "Average Rating", value: "4.9/5", color: "from-yellow-500 to-yellow-600" },
     { icon: Award, label: "Client Satisfaction", value: "98%", color: "from-green-500 to-green-600" },
-    { icon: TrendingUp, label: "Repeat Business", value: "95%", color: "from-orange-500 to-orange-600" }
+    { icon: TrendingUp, label: "Repeat Business", value: "95%", color: "from-blue-500 to-blue-700" }
   ];
 
   const companies = [
@@ -90,7 +90,7 @@ export default function Testimonials() {
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
             Client
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-blue-700">
               Testimonials
             </span>
           </h1>
@@ -179,7 +179,7 @@ export default function Testimonials() {
                       <img
                         src={testimonial.image}
                         alt={testimonial.name}
-                        className="w-14 h-14 rounded-full border-3 border-orange-200 object-cover"
+                        className="w-14 h-14 rounded-full border-3 border-blue-200 object-cover"
                       />
                       <div>
                         <div className="font-bold text-slate-900 text-lg">{testimonial.name}</div>

@@ -88,7 +88,7 @@ export default function Gallery() {
 
   const categoryColors: Record<string, string> = {
     "Automotive": "from-blue-500 to-blue-600",
-    "Industrial": "from-orange-500 to-orange-600",
+    "Industrial": "from-blue-500 to-blue-700",
     "Furniture": "from-green-500 to-green-600",
     "Architecture": "from-purple-500 to-purple-600"
   };
@@ -116,7 +116,7 @@ export default function Gallery() {
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
             Our
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-blue-700">
               Gallery
             </span>
           </h1>
@@ -143,7 +143,7 @@ export default function Gallery() {
                 onClick={() => setActiveCategory(category)}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
                   activeCategory === category
-                    ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg'
+                    ? 'bg-gradient-to-r from-blue-500 to-blue-700 text-white shadow-lg'
                     : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
                 }`}
                 data-testid={`filter-${category.toLowerCase()}`}
@@ -190,7 +190,7 @@ export default function Gallery() {
                       </div>
                       <div className="absolute bottom-0 left-0 right-0 p-4">
                         <h3 className="text-white font-bold text-lg">{image.title}</h3>
-                        <Badge className="mt-2 bg-gradient-to-r from-orange-500 to-orange-600 border-0">
+                        <Badge className="mt-2 bg-gradient-to-r from-blue-500 to-blue-700 border-0">
                           {image.category}
                         </Badge>
                       </div>
@@ -293,7 +293,7 @@ export default function Gallery() {
               {
                 count: categories.length - 1,
                 label: "Industry Categories",
-                color: "from-orange-500 to-orange-600"
+                color: "from-blue-500 to-blue-700"
               },
               {
                 count: "100%",

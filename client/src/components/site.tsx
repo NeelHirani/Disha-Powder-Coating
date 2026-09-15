@@ -73,16 +73,16 @@ export function PageHero({
       />
       <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-900/35" />
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/50" />
-      <div className="absolute -right-20 top-16 h-80 w-80 rounded-full bg-orange-500/20 blur-3xl" />
+      <div className="absolute -right-20 top-16 h-80 w-80 rounded-full bg-blue-500/20 blur-3xl" />
       <Container className="relative z-10 py-20 md:py-28">
         {eyebrow && (
-          <p className="mb-4 text-xs font-medium uppercase tracking-[0.28em] text-orange-400">
+          <p className="mb-4 text-xs font-medium uppercase tracking-[0.28em] text-amber-400">
             {eyebrow}
           </p>
         )}
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
           {title}
-          {highlight && <span className="mt-1 block text-orange-400">{highlight}</span>}
+          {highlight && <span className="mt-1 block text-amber-400">{highlight}</span>}
         </h1>
         <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-300">{description}</p>
       </Container>
@@ -113,7 +113,7 @@ export function CtaBanner({
         <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-slate-300">{description}</p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link href={primaryHref}>
-            <Button className="h-12 rounded-full bg-orange-500 px-8 text-base font-semibold text-white shadow-lg shadow-orange-500/25 hover:bg-orange-600">
+            <Button className="h-12 rounded-full bg-blue-500 px-8 text-base font-semibold text-white shadow-lg shadow-blue-500/25 hover:bg-blue-700">
               {primaryLabel}
               <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
@@ -145,7 +145,7 @@ export function SurfaceCard({
     <div
       onClick={onClick}
       className={cn(
-        "rounded-2xl border border-slate-200/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange-200 hover:shadow-xl hover:shadow-orange-500/5",
+        "rounded-2xl border border-slate-200/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl hover:shadow-blue-500/5",
         className,
       )}
     >

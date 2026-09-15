@@ -20,7 +20,7 @@ export default function Services() {
       description: "Precision color matching to meet your exact specifications using advanced color analysis technology.",
       materials: ["RAL Colors", "Pantone Colors", "Custom Colors", "Metallic Shades"],
       finishes: ["Standard", "Metallic", "Pearl"],
-      color: "from-orange-500 to-orange-600"
+      color: "from-blue-500 to-blue-700"
     },
     {
       icon: Sparkles,
@@ -104,7 +104,7 @@ export default function Services() {
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
             Our
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-blue-700">
               Services
             </span>
           </h1>
@@ -255,7 +255,7 @@ export default function Services() {
                     transition={{ delay: 0.3 + idx * 0.05 }}
                     className="flex items-start gap-3"
                   >
-                    <div className="w-6 h-6 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <CheckCircle size={16} className="text-white" />
                     </div>
                     <span className="text-gray-700 font-medium">{item}</span>
@@ -294,7 +294,7 @@ export default function Services() {
               >
                 <Card className="p-8 border-0 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all text-white h-full group">
                   <CardContent className="p-0 space-y-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-blue-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Sparkles size={24} />
                     </div>
                     <h3 className="text-xl font-bold">{tech.title}</h3>
@@ -339,7 +339,7 @@ export default function Services() {
                 className="relative"
               >
                 <Card className="p-6 text-center border-0 bg-white hover:shadow-lg transition-all h-full">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg shadow-lg">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg shadow-lg">
                     {item.step}
                   </div>
                   <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
@@ -350,7 +350,7 @@ export default function Services() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="hidden md:block absolute top-12 -right-2 w-4 h-0.5 bg-gradient-to-r from-orange-500 to-transparent"
+                    className="hidden md:block absolute top-12 -right-2 w-4 h-0.5 bg-gradient-to-r from-blue-500 to-transparent"
                   />
                 )}
               </motion.div>

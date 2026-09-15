@@ -110,7 +110,7 @@ export default function Quote() {
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
             Request Your
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-blue-700">
               Free Quote
             </span>
           </h1>
@@ -141,7 +141,7 @@ export default function Quote() {
                   whileHover={{ scale: 1.1 }}
                   className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg transition-all mb-3 ${
                     item.num <= step 
-                      ? 'bg-gradient-to-br from-orange-500 to-orange-600 text-white shadow-lg' 
+                      ? 'bg-gradient-to-br from-blue-500 to-blue-700 text-white shadow-lg' 
                       : 'bg-gray-300 text-gray-600'
                   }`}
                   data-testid={`step-${item.num}`}
@@ -156,7 +156,7 @@ export default function Quote() {
                 {idx < 3 && (
                   <div
                     className={`absolute h-1 transition-all top-6 ${
-                      item.num < step ? 'bg-gradient-to-r from-orange-500 to-orange-600' : 'bg-gray-300'
+                      item.num < step ? 'bg-gradient-to-r from-blue-500 to-blue-700' : 'bg-gray-300'
                     }`}
                     style={{
                       width: `calc(100% - 24px)`,
@@ -211,8 +211,8 @@ export default function Quote() {
                               }}
                               className={`p-4 rounded-xl text-left border-2 transition-all ${
                                 formData.serviceType === option.value
-                                  ? 'border-orange-500 bg-orange-50'
-                                  : 'border-gray-200 hover:border-orange-300 bg-white'
+                                  ? 'border-blue-500 bg-blue-50'
+                                  : 'border-gray-200 hover:border-blue-300 bg-white'
                               }`}
                             >
                               <h3 className="font-bold text-slate-900">{option.label}</h3>
@@ -227,7 +227,7 @@ export default function Quote() {
                           type="button" 
                           onClick={nextStep}
                           disabled={!formData.serviceType}
-                          className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all"
+                          className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all"
                           data-testid="button-next-1"
                         >
                           Next Step
@@ -259,7 +259,7 @@ export default function Quote() {
                             onChange={handleChange}
                             placeholder="e.g., 50 parts, 100 pieces"
                             required
-                            className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                            className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                             data-testid="input-quantity"
                           />
                         </div>
@@ -302,7 +302,7 @@ export default function Quote() {
                             value={formData.colorPreference}
                             onChange={handleChange}
                             placeholder="e.g., Black, RAL 9005"
-                            className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                            className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                           />
                         </div>
                       </div>
@@ -316,7 +316,7 @@ export default function Quote() {
                           placeholder="Describe your project, including dimensions, materials, finish requirements, etc."
                           rows={5}
                           required
-                          className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                          className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                           data-testid="textarea-specifications"
                         />
                       </div>
@@ -334,7 +334,7 @@ export default function Quote() {
                         <Button 
                           type="button" 
                           onClick={nextStep}
-                          className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-lg shadow-lg"
+                          className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-lg shadow-lg"
                           data-testid="button-next-2"
                         >
                           Next Step
@@ -357,14 +357,14 @@ export default function Quote() {
                         <p className="text-gray-600 mb-8">Share your project files (optional but recommended)</p>
                       </div>
 
-                      <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-orange-500 transition-colors bg-white hover:bg-orange-50">
+                      <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-blue-500 transition-colors bg-white hover:bg-blue-50">
                         <label className="cursor-pointer block">
                           <div className="flex flex-col items-center gap-3">
-                            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
+                            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center">
                               <FileUp size={32} className="text-white" />
                             </div>
                             <div>
-                              <span className="text-orange-600 hover:text-orange-700 font-semibold text-lg">Click to upload</span>
+                              <span className="text-blue-700 hover:text-blue-800 font-semibold text-lg">Click to upload</span>
                               <span className="text-gray-600"> or drag and drop</span>
                             </div>
                             <p className="text-sm text-gray-500">PNG, JPG, PDF, DWG, DXF up to 10MB each</p>
@@ -388,10 +388,10 @@ export default function Quote() {
                                 key={index}
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                className="flex items-center justify-between p-3 bg-gradient-to-r from-orange-50 to-orange-100 rounded-lg border border-orange-200"
+                                className="flex items-center justify-between p-3 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200"
                               >
                                 <div className="flex items-center gap-2">
-                                  <Upload size={18} className="text-orange-600" />
+                                  <Upload size={18} className="text-blue-700" />
                                   <span className="text-sm text-gray-700 font-medium truncate">{file.name}</span>
                                   <span className="text-xs text-gray-500">({(file.size / 1024).toFixed(1)} KB)</span>
                                 </div>
@@ -422,7 +422,7 @@ export default function Quote() {
                         <Button 
                           type="button" 
                           onClick={nextStep}
-                          className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-lg shadow-lg"
+                          className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-lg shadow-lg"
                           data-testid="button-next-3"
                         >
                           Next Step
@@ -454,7 +454,7 @@ export default function Quote() {
                             onChange={handleChange}
                             placeholder="Your full name"
                             required
-                            className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                            className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                             data-testid="input-contact-name"
                           />
                         </div>
@@ -468,7 +468,7 @@ export default function Quote() {
                             onChange={handleChange}
                             placeholder="your.email@example.com"
                             required
-                            className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                            className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                             data-testid="input-contact-email"
                           />
                         </div>
@@ -482,7 +482,7 @@ export default function Quote() {
                             onChange={handleChange}
                             placeholder="+91 XXXXX XXXXX"
                             required
-                            className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                            className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                             data-testid="input-contact-phone"
                           />
                         </div>
@@ -494,7 +494,7 @@ export default function Quote() {
                             value={formData.company}
                             onChange={handleChange}
                             placeholder="Your company name"
-                            className="border-gray-300 focus:border-orange-500 focus:ring-orange-500"
+                            className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                             data-testid="input-company"
                           />
                         </div>
@@ -513,7 +513,7 @@ export default function Quote() {
                         <Button 
                           type="submit"
                           disabled={isSubmitting}
-                          className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50"
+                          className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all disabled:opacity-50"
                           data-testid="button-submit-quote"
                         >
                           {isSubmitting ? "Submitting..." : "Submit Quote Request"}
@@ -565,7 +565,7 @@ export default function Quote() {
               >
                 <Card className="p-6 border-0 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all text-white h-full">
                   <CardContent className="p-0 space-y-4 text-center">
-                    <div className="w-14 h-14 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto font-bold text-xl shadow-lg">
+                    <div className="w-14 h-14 bg-gradient-to-br from-amber-400 to-blue-700 rounded-full flex items-center justify-center mx-auto font-bold text-xl shadow-lg">
                       {item.step}
                     </div>
                     <h3 className="font-bold text-lg">{item.title}</h3>
@@ -577,7 +577,7 @@ export default function Quote() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="hidden md:block absolute top-8 -right-3 w-6 h-1 bg-gradient-to-r from-orange-400 to-transparent"
+                    className="hidden md:block absolute top-8 -right-3 w-6 h-1 bg-gradient-to-r from-amber-400 to-transparent"
                   />
                 )}
               </motion.div>

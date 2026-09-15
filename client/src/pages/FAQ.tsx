@@ -39,7 +39,7 @@ export default function FAQ() {
     {
       category: "Pricing",
       icon: Shield,
-      color: "from-orange-500 to-orange-600",
+      color: "from-blue-500 to-blue-700",
       questions: [
         {
           q: "How much does powder coating cost?",
@@ -149,13 +149,13 @@ export default function FAQ() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="flex justify-center mb-6"
           >
-            <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
+            <div className="w-20 h-20 bg-gradient-to-br from-amber-400 to-blue-700 rounded-full flex items-center justify-center shadow-lg">
               <HelpCircle size={40} className="text-white" />
             </div>
           </motion.div>
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
             Frequently Asked
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-blue-700">
               Questions
             </span>
           </h1>
@@ -163,6 +163,22 @@ export default function FAQ() {
             Find answers to common questions about our powder coating services and products
           </p>
         </motion.div>
+      </section>
+
+      {/* SEARCH BAR */}
+      <section className="py-8 bg-white border-b">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="relative">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <Input
+              type="text"
+              placeholder="Search FAQs..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-12 pr-4 py-3 text-lg border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+            />
+          </div>
+        </div>
       </section>
 
       {/* FAQ ACCORDION */}
@@ -186,7 +202,7 @@ export default function FAQ() {
                         <Icon className="w-6 h-6 text-white" />
                       </div>
                       <h2 className="text-3xl font-bold text-slate-900">{category.category}</h2>
-                      <div className="flex-1 h-0.5 bg-gradient-to-r from-orange-400 to-transparent ml-4"></div>
+                      <div className="flex-1 h-0.5 bg-gradient-to-r from-amber-400 to-transparent ml-4"></div>
                     </div>
 
                     {/* Questions */}
@@ -336,7 +352,7 @@ export default function FAQ() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <p className="text-4xl font-bold text-orange-600 mb-2">{stat.number}</p>
+                <p className="text-4xl font-bold text-blue-700 mb-2">{stat.number}</p>
                 <p className="text-lg text-gray-600 font-medium">{stat.label}</p>
               </motion.div>
             ))}

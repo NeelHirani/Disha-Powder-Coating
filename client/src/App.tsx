@@ -5,6 +5,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster, TooltipProvider } from "@/components/UIComponents";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
@@ -44,6 +45,7 @@ function Router() {
         <Route component={NotFound} />
       </Switch>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }

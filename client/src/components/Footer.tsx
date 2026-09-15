@@ -61,8 +61,8 @@ export default function Footer() {
       </div>
 
       {/* Decorative Gradient Orbs */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-orange-500/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-blue-500/20 to-transparent rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-amber-500/20 to-transparent rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
@@ -77,15 +77,16 @@ export default function Footer() {
           <motion.div variants={itemVariants} className="lg:col-span-4 space-y-6">
             <Link href="/">
               <motion.div
-                whileHover={{ scale: 1.05, rotate: 2 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 className="flex items-center gap-3 group w-fit cursor-pointer"
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow group-hover:from-orange-600 group-hover:to-orange-800">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-indigo-800 rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow group-hover:from-blue-700 group-hover:to-indigo-900">
                   <span className="text-white font-bold text-3xl">D</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-amber-400 bg-clip-text text-transparent">
                     Disha
                   </span>
                   <span className="text-xs font-semibold text-gray-300">Powder Coating</span>
@@ -122,16 +123,16 @@ export default function Footer() {
           {/* Quick Links */}
           <motion.div variants={itemVariants} className="lg:col-span-3 space-y-5">
             <div className="flex items-center gap-3">
-              <div className="w-1.5 h-8 bg-gradient-to-b from-orange-500 to-orange-600 rounded-full" />
+              <div className="w-1.5 h-8 bg-gradient-to-b from-blue-500 to-amber-500 rounded-full" />
               <h3 className="font-bold text-lg text-white">Quick Links</h3>
             </div>
             <div className="space-y-3">
               {quickLinks.map((link, i) => (
                 <Link key={i} href={link.href}>
                   <motion.div
-                    whileHover={{ x: 8, color: "#fb923c" }}
+                    whileHover={{ x: 8, color: "#60a5fa" }}
                     transition={{ type: "spring", stiffness: 300 }}
-                    className="flex items-center gap-2 text-gray-300 hover:text-orange-400 transition-colors cursor-pointer group"
+                    className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors cursor-pointer group"
                     data-testid={`footer-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     <ArrowRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -155,7 +156,7 @@ export default function Footer() {
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="text-sm text-gray-300 hover:text-orange-400 transition-colors cursor-pointer"
+                  className="text-sm text-gray-300 hover:text-blue-400 transition-colors cursor-pointer"
                 >
                   • {service}
                 </motion.p>
@@ -176,12 +177,12 @@ export default function Footer() {
                 whileHover={{ x: 5 }}
                 className="flex items-start gap-3 group cursor-pointer"
               >
-                <div className="w-10 h-10 bg-gradient-to-br from-orange-500/20 to-orange-600/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:from-orange-500/40 group-hover:to-orange-600/40 transition-all">
-                  <Phone size={18} className="text-orange-400" />
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:from-blue-500/40 group-hover:to-blue-600/40 transition-all">
+                  <Phone size={18} className="text-blue-400" />
                 </div>
                 <div>
                   <p className="text-xs text-gray-400">Call Us</p>
-                  <p className="font-medium text-white hover:text-orange-400 transition-colors text-sm">+91 98765 43210</p>
+                  <p className="font-medium text-white hover:text-blue-400 transition-colors text-sm">+91 98765 43210</p>
                 </div>
               </motion.a>
 
@@ -241,7 +242,7 @@ export default function Footer() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 p-8 bg-gradient-to-r from-orange-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-white/20 transition-all"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 p-8 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-white/20 transition-all"
         >
           <div className="flex flex-col justify-center">
             <h3 className="text-2xl font-bold text-white mb-2">Ready to Transform Your Project?</h3>
@@ -249,7 +250,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center justify-start md:justify-end">
             <Link href="/quote">
-              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-medium shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+              <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
                 Request Quote Now
                 <Send className="ml-2 h-4 w-4" />
               </Button>
@@ -266,8 +267,8 @@ export default function Footer() {
         >
           <p data-testid="footer-copyright">© {currentYear} Disha Powder Coating. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex gap-6">
-            <a href="#" className="hover:text-orange-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-orange-400 transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-blue-400 transition-colors">Terms of Service</a>
           </div>
         </motion.div>
       </div>

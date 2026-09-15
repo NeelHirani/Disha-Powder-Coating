@@ -48,7 +48,7 @@ export default function Contact() {
       icon: Mail,
       title: "Email",
       value: "info@dishapowdercoating.com",
-      color: "from-orange-500 to-orange-600"
+      color: "from-blue-500 to-blue-700"
     },
     {
       icon: MapPin,
@@ -87,7 +87,7 @@ export default function Contact() {
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
             Let's Connect & 
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-blue-700">
               Bring Your Vision to Life
             </span>
           </h1>
@@ -143,7 +143,7 @@ export default function Contact() {
               <Card className="p-8 border-0 shadow-2xl bg-white">
                 <CardContent className="p-0">
                   <div className="flex items-center gap-3 mb-8">
-                    <MessageSquare className="w-6 h-6 text-orange-600" />
+                    <MessageSquare className="w-6 h-6 text-blue-700" />
                     <h2 className="text-3xl font-bold text-slate-900">Send Us a Message</h2>
                   </div>
                   
@@ -157,7 +157,7 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder="Your full name"
                         required
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-all"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
                       />
                     </div>
 
@@ -171,7 +171,7 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder="your.email@example.com"
                         required
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-all"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
                       />
                     </div>
 
@@ -184,14 +184,14 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+91 XXXXX XXXXX"
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-all"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all"
                       />
                     </div>
 
                     <div>
                       <Label htmlFor="service" className="text-sm font-semibold text-gray-700 mb-2 block">Service Interest</Label>
                       <Select value={formData.serviceInterest} onValueChange={handleSelectChange}>
-                        <SelectTrigger className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-orange-500">
+                        <SelectTrigger className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500">
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
@@ -214,14 +214,14 @@ export default function Contact() {
                         placeholder="Tell us about your project or inquiry..."
                         required
                         rows={5}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-all resize-none"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all resize-none"
                       />
                     </div>
 
                     <Button 
                       type="submit" 
                       disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold flex items-center justify-center gap-2"
+                      className="w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold flex items-center justify-center gap-2"
                     >
                       {isSubmitting ? (
                         <>
@@ -262,11 +262,11 @@ export default function Contact() {
                   </div>
 
                   <div className="border-t pt-6 flex items-start gap-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-orange-600" />
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-blue-700" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-slate-909 mb-1">Email Us</h3>
+                      <h3 className="font-bold text-slate-900 mb-1">Email Us</h3>
                       <p className="text-gray-600">info@dishapowdercoating.com</p>
                       <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
                     </div>
@@ -289,21 +289,21 @@ export default function Contact() {
               <Card className="p-6 border-0 bg-gradient-to-br from-blue-600 to-blue-700 shadow-lg text-white">
                 <CardContent className="p-0 space-y-4">
                   <div className="flex items-start gap-3">
-                    <Zap className="w-5 h-5 text-orange-400 flex-shrink-0 mt-1" />
+                    <Zap className="w-5 h-5 text-amber-400 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold mb-1">Fast Response</h4>
                       <p className="text-blue-100 text-sm">Get a response within 24 hours</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Zap className="w-5 h-5 text-orange-400 flex-shrink-0 mt-1" />
+                    <Zap className="w-5 h-5 text-amber-400 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold mb-1">Free Quote</h4>
                       <p className="text-blue-100 text-sm">No hidden charges, transparent pricing</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Zap className="w-5 h-5 text-orange-400 flex-shrink-0 mt-1" />
+                    <Zap className="w-5 h-5 text-amber-400 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold mb-1">Expert Consultation</h4>
                       <p className="text-blue-100 text-sm">15+ years of industry expertise</p>
@@ -370,14 +370,14 @@ export default function Contact() {
                   </div>
                   <div className="space-y-4 pt-6 border-t border-white/20">
                     <div>
-                      <p className="text-orange-400 font-semibold text-sm">ADDRESS</p>
+                      <p className="text-amber-400 font-semibold text-sm">ADDRESS</p>
                       <p className="text-blue-100">Industrial Area, Phase 2<br />Mumbai, Maharashtra 400001, India</p>
                     </div>
                     <div>
-                      <p className="text-orange-400 font-semibold text-sm">HOURS</p>
+                      <p className="text-amber-400 font-semibold text-sm">HOURS</p>
                       <p className="text-blue-100">Mon-Sat: 9:00 AM - 6:00 PM<br />Sunday: Closed</p>
                     </div>
-                    <p className="text-sm text-orange-300 italic pt-4">
+                    <p className="text-sm text-blue-300 italic pt-4">
                       ⓘ Please call ahead to schedule your visit
                     </p>
                   </div>

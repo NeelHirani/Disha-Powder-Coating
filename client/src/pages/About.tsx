@@ -1,21 +1,17 @@
-'use client';
 import { Button, Card, CardContent } from "@/components/UIComponents";
-import { ArrowRight, Sparkles, HeartHandshake, Palette, Factory, Leaf, Clock, ChevronDown, Award, Users, Zap, Target, CheckCircle, TrendingUp } from "lucide-react";
+import { ArrowRight, Sparkles, HeartHandshake, Palette, Factory, Leaf, Clock, Award, Users, Zap, CheckCircle, TrendingUp } from "lucide-react";
 import founderImage from "@assets/generated_images/Company_founder_portrait_75b4692c.png";
 import heroWorkshopImage from "@assets/generated_images/Powder_coating_workshop_hero_d77b1d0b.png";
 import { motion } from "framer-motion";
-import { useRef } from "react";
-import { useInView } from "framer-motion";
 import { Link } from "wouter";
 
 export default function AboutNew() {
-  const ref = useRef(null);
 
   return (
     <div className="bg-white overflow-x-hidden">
       {/* HERO – Split Screen with Floating Elements */}
       <section className="relative min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-orange-50 to-white" />
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-blue-50 to-white" />
         
         <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
           {/* Left – Text */}
@@ -25,14 +21,14 @@ export default function AboutNew() {
             transition={{ duration: 0.9 }}
             className="space-y-10"
           >
-            <div className="inline-flex items-center gap-3 text-orange-600 font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-3 text-blue-700 font-semibold uppercase tracking-wider">
               <Sparkles className="w-5 h-5" />
               <span>Since 2010 • Family-Owned</span>
             </div>
 
             <h1 className="text-6xl lg:text-8xl font-black text-gray-900 leading-none">
               We Make Metal<br />
-              <span className="text-orange-600">Smile</span>.
+              <span className="text-blue-700">Smile</span>.
             </h1>
 
             <p className="text-xl text-gray-700 leading-relaxed max-w-lg">
@@ -57,7 +53,7 @@ export default function AboutNew() {
               transition={{ duration: 6, repeat: Infinity }}
               className="absolute inset-0 z-20"
             >
-              <div className="bg-white rounded-3xl shadow-2xl p-2 border border-orange-100 h-full">
+              <div className="bg-white rounded-3xl shadow-2xl p-2 border border-blue-100 h-full">
                 <img src={heroWorkshopImage} alt="Powder coating workshop" className="w-full h-full rounded-3xl object-cover" />
               </div>
             </motion.div>
@@ -76,7 +72,7 @@ export default function AboutNew() {
       </section>
 
       {/* STORY SECTION – Warm & Human */}
-      <section className="py-12 bg-gradient-to-b from-orange-50 to-white">
+      <section className="py-12 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -87,23 +83,23 @@ export default function AboutNew() {
               <div className="relative flex items-center gap-8 max-w-4xl mx-auto py-4">
                 {/* Vertical line + pin */}
                 <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center shadow-2xl">
+                  <div className="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center shadow-2xl">
                     <span className="text-white font-black text-2xl">2010</span>
                   </div>
-                  <div className="w-1 h-32 bg-orange-300 mt-4" />
+                  <div className="w-1 h-32 bg-blue-300 mt-4" />
                 </div>
 
                 {/* Quote Card */}
                 <motion.div
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  className="flex-1 bg-white rounded-3xl p-10 shadow-xl border border-orange-100"
+                  className="flex-1 bg-white rounded-3xl p-10 shadow-xl border border-blue-100"
                 >
                   <blockquote className="text-3xl md:text-4xl font-medium text-gray-800 leading-tight">
                     “I didn’t know powder coating.<br />
-                    <span className="text-orange-600 font-bold">But I knew how to care.</span>”
+                    <span className="text-blue-700 font-bold">But I knew how to care.</span>”
                   </blockquote>
-                  <p className="mt-8 text-right text-xl text-orange-700 font-bold">— Manoj Bavaria</p>
+                  <p className="mt-8 text-right text-xl text-blue-800 font-bold">— Manoj Bavaria</p>
                 </motion.div>
               </div>
             </div>
@@ -120,9 +116,9 @@ export default function AboutNew() {
 
           <div className="grid md:grid-cols-3 gap-10">
             {[
-              { icon: HeartHandshake, title: "Family First", desc: "Every customer feels like home", color: "from-red-100 to-orange-100" },
-              { icon: Palette, title: "Color is Emotion", desc: "We don’t just match colors — we match feelings", color: "from-amber-100 to-orange-100" },
-              { icon: Factory, title: "Made to Last", desc: "15 years later, our first job still looks new", color: "from-orange-100 to-amber-100" },
+              { icon: HeartHandshake, title: "Family First", desc: "Every customer feels like home", color: "from-red-100 to-blue-100" },
+              { icon: Palette, title: "Color is Emotion", desc: "We don’t just match colors — we match feelings", color: "from-amber-100 to-blue-100" },
+              { icon: Factory, title: "Made to Last", desc: "15 years later, our first job still looks new", color: "from-blue-100 to-amber-100" },
             ].map((v, i) => (
               <motion.div
                 key={i}
@@ -132,8 +128,8 @@ export default function AboutNew() {
                 whileHover={{ y: -12, scale: 1.03 }}
                 className="group h-full"
               >
-                <div className={`bg-gradient-to-br ${v.color} rounded-3xl p-12 text-center shadow-lg hover:shadow-2xl transition-all border border-orange-100 h-full flex flex-col justify-center`}>
-                  <v.icon className="w-16 h-16 text-orange-600 mx-auto mb-6 group-hover:scale-110 transition" />
+                <div className={`bg-gradient-to-br ${v.color} rounded-3xl p-12 text-center shadow-lg hover:shadow-2xl transition-all border border-blue-100 h-full flex flex-col justify-center`}>
+                  <v.icon className="w-16 h-16 text-blue-700 mx-auto mb-6 group-hover:scale-110 transition" />
                   <h3 className="text-3xl font-bold text-gray-900 mb-4">{v.title}</h3>
                   <p className="text-lg text-gray-700">{v.desc}</p>
                 </div>
@@ -144,7 +140,7 @@ export default function AboutNew() {
       </section>
 
       {/* QUICK FACTS – Minimal Bar */}
-      <section className="py-20 bg-orange-600">
+      <section className="py-20 bg-blue-700">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
           {[
             { icon: Clock, value: "3–7 Days", label: "Average Turnaround" },
@@ -160,7 +156,7 @@ export default function AboutNew() {
             >
               <f.icon className="w-12 h-12 mx-auto mb-3" />
               <p className="text-4xl font-black">{f.value}</p>
-              <p className="text-orange-100">{f.label}</p>
+              <p className="text-blue-100">{f.label}</p>
             </motion.div>
           ))}
         </div>
@@ -226,18 +222,18 @@ export default function AboutNew() {
                 className={`flex gap-8 items-start ${i % 2 === 1 ? "flex-row-reverse" : ""}`}
               >
                 <div className="flex-1">
-                  <div className={`bg-gradient-to-br ${i % 2 === 0 ? "from-orange-50 to-amber-50" : "from-amber-50 to-orange-50"} rounded-2xl p-8 border border-orange-200`}>
-                    <div className="inline-block bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">{item.year}</div>
+                  <div className={`bg-gradient-to-br ${i % 2 === 0 ? "from-blue-50 to-amber-50" : "from-amber-50 to-blue-50"} rounded-2xl p-8 border border-blue-200`}>
+                    <div className="inline-block bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">{item.year}</div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-3">{item.title}</h3>
                     <p className="text-gray-700 leading-relaxed mb-4">{item.description}</p>
-                    <div className="flex items-center gap-2 text-orange-600 font-semibold">
+                    <div className="flex items-center gap-2 text-blue-700 font-semibold">
                       <CheckCircle size={18} />
                       {item.highlight}
                     </div>
                   </div>
                 </div>
                 <div className="hidden md:flex w-16 justify-center">
-                  <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center text-white font-bold">
                     {i + 1}
                   </div>
                 </div>
@@ -267,7 +263,7 @@ export default function AboutNew() {
               { icon: Zap, title: "Industry Excellence", desc: "Recognized by industry associations", color: "from-yellow-50 to-yellow-100" },
               { icon: CheckCircle, title: "Zero Defect Policy", desc: "Quality guaranteed on every order", color: "from-purple-50 to-purple-100" },
               { icon: TrendingUp, title: "15+ Years Track Record", desc: "Consistent performance since 2010", color: "from-pink-50 to-pink-100" },
-              { icon: Users, title: "500+ Satisfied Clients", desc: "Trusted by leading corporations", color: "from-orange-50 to-orange-100" },
+              { icon: Users, title: "500+ Satisfied Clients", desc: "Trusted by leading corporations", color: "from-blue-50 to-blue-100" },
             ].map((cert, i) => (
               <motion.div
                 key={i}
@@ -345,13 +341,13 @@ export default function AboutNew() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.15 }}
               >
-                <Card className="h-full hover:shadow-xl transition-all border-2 border-orange-100">
+                <Card className="h-full hover:shadow-xl transition-all border-2 border-blue-100">
                   <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold text-orange-600 mb-6">{item.title}</h3>
+                    <h3 className="text-2xl font-bold text-blue-700 mb-6">{item.title}</h3>
                     <ul className="space-y-4">
                       {item.points.map((point, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <CheckCircle className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
+                          <CheckCircle className="w-6 h-6 text-blue-700 flex-shrink-0 mt-1" />
                           <span className="text-gray-700 font-medium">{point}</span>
                         </li>
                       ))}
@@ -365,7 +361,7 @@ export default function AboutNew() {
       </section>
 
       {/* FOUNDER SPOTLIGHT - ENHANCED */}
-      <section className="py-12 bg-gradient-to-br from-orange-50 via-amber-50 to-white">
+      <section className="py-12 bg-gradient-to-br from-blue-50 via-amber-50 to-white">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -379,7 +375,7 @@ export default function AboutNew() {
               transition={{ duration: 6, repeat: Infinity }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-orange-400 to-red-400 rounded-3xl p-1 shadow-2xl">
+              <div className="bg-gradient-to-br from-amber-400 to-red-400 rounded-3xl p-1 shadow-2xl">
                 <img src={founderImage} alt="Manoj Bavaria" className="w-full rounded-3xl" />
               </div>
             </motion.div>
@@ -392,9 +388,9 @@ export default function AboutNew() {
               className="space-y-8"
             >
               <div>
-                <div className="inline-block bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-bold mb-4">Founder & CEO</div>
+                <div className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-bold mb-4">Founder & CEO</div>
                 <h2 className="text-5xl font-black text-gray-900 mb-2">Manoj Bavaria</h2>
-                <p className="text-xl text-orange-600 font-semibold">The Visionary Behind Disha</p>
+                <p className="text-xl text-blue-700 font-semibold">The Visionary Behind Disha</p>
               </div>
 
               <div className="space-y-6">
@@ -415,8 +411,8 @@ export default function AboutNew() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
-                    <p className="text-3xl font-black text-orange-600">5000+</p>
+                  <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <p className="text-3xl font-black text-blue-700">5000+</p>
                     <p className="text-gray-700 font-medium">Projects Delivered</p>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
@@ -429,7 +425,7 @@ export default function AboutNew() {
               <div className="h-4" />
 
               <Link to="/contact">
-                <Button className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-8 py-6 rounded-lg w-full">
+                <Button className="bg-blue-700 hover:bg-blue-800 text-white font-bold px-8 py-6 rounded-lg w-full">
                   Schedule a Meeting with Manoj <ArrowRight className="ml-2" size={20} />
                 </Button>
               </Link>
