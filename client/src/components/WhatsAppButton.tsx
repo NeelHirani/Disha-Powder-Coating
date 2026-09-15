@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false);
-  const phoneNumber = "919876543210"; // Replace with actual number
+  const phoneNumber = "916351334789"; // Replace with actual number
   const message = "Hi! I'm interested in powder coating services.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
