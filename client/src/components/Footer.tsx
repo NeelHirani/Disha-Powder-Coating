@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, Twitter, ArrowRight, Sparkles, Send } from "lucide-react";
 import { Button } from "@/components/UIComponents";
 import { motion } from "framer-motion";
+import { contactInfo } from "@/data/company";
 
 const currentYear = new Date().getFullYear();
 
@@ -173,7 +174,7 @@ export default function Footer() {
             <div className="space-y-4">
               {/* Phone */}
               <motion.a
-                href="tel:+919876543210"
+                href={`tel:${contactInfo.phone.replace(/[^0-9+]/g, '')}`}
                 whileHover={{ x: 5 }}
                 className="flex items-start gap-3 group cursor-pointer"
               >
@@ -182,13 +183,13 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-400">Call Us</p>
-                  <p className="font-medium text-white hover:text-blue-400 transition-colors text-sm">+91 98765 43210</p>
+                  <p className="font-medium text-white hover:text-blue-400 transition-colors text-sm">{contactInfo.phone}</p>
                 </div>
               </motion.a>
 
               {/* Email */}
               <motion.a
-                href="mailto:info@dishapowdercoating.com"
+                href={`mailto:${contactInfo.email}`}
                 whileHover={{ x: 5 }}
                 className="flex items-start gap-3 group cursor-pointer"
               >
@@ -197,7 +198,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-gray-400">Email</p>
-                  <p className="font-medium text-white hover:text-blue-400 transition-colors text-sm break-all">info@dishapowdercoating.com</p>
+                  <p className="font-medium text-white hover:text-blue-400 transition-colors text-sm break-all">{contactInfo.email}</p>
                 </div>
               </motion.a>
 
@@ -212,7 +213,7 @@ export default function Footer() {
                 <div>
                   <p className="text-xs text-gray-400">Visit Us</p>
                   <p className="font-medium text-white text-sm leading-relaxed">
-                    Industrial Area, Phase 2<br />Mumbai, Maharashtra 400001
+                    {contactInfo.address.street}<br />{contactInfo.address.city}, {contactInfo.address.state} {contactInfo.address.zip}
                   </p>
                 </div>
               </motion.div>
@@ -228,7 +229,7 @@ export default function Footer() {
                 <div>
                   <p className="text-xs text-gray-400">Business Hours</p>
                   <p className="font-medium text-white text-sm" data-testid="footer-hours">
-                    Mon - Sat: 9:00 AM - 6:00 PM
+                    {contactInfo.hours}
                   </p>
                 </div>
               </motion.div>

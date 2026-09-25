@@ -1,4 +1,5 @@
 import { Button, Card, CardContent } from "@/components/UIComponents";
+import { SEO } from "@/components/SEO";
 import { ArrowRight, Sparkles, HeartHandshake, Palette, Factory, Leaf, Clock, Award, Users, Zap, CheckCircle, TrendingUp } from "lucide-react";
 import founderImage from "@assets/generated_images/Company_founder_portrait_75b4692c.png";
 import heroWorkshopImage from "@assets/generated_images/Powder_coating_workshop_hero_d77b1d0b.png";
@@ -9,6 +10,10 @@ export default function AboutNew() {
 
   return (
     <div className="bg-white overflow-x-hidden">
+      <SEO
+        title="About Us - Our Story & Experience | Disha Powder Coating"
+        description="Learn about Disha Powder Coating, founded in 2010 by Manoj Bavaria. Over 15 years of excellence in metal finishing, ISO 9001:2015 certified."
+      />
       {/* HERO – Split Screen with Floating Elements */}
       <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-blue-50 to-white" />

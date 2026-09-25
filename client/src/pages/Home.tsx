@@ -2,11 +2,14 @@ import { Link } from "wouter";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/UIComponents";
+import { SEO } from "@/components/SEO";
 import {
-  Wrench, Palette, Sparkles, Shield, Car, Factory, Sofa, Building,
-  ArrowRight, CheckCircle, Award, Users, Clock, Star
+  Car, Factory, Building, ArrowRight, CheckCircle, Award
 } from "lucide-react";
 import beforeAfterImage from "@assets/generated_images/Before_after_coating_comparison_9a2d0fe3.png";
+import { homeServices as services } from "@/data/services";
+import { industries } from "@/data/industries";
+import { stats, certifications } from "@/data/company";
 
 export default function Home() {
   const [bgImageIndex, setBgImageIndex] = useState(0);
@@ -25,36 +28,12 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  const services = [
-    { icon: Wrench, title: "Custom Powder Coating", description: "Premium finishes in 100+ colors for metal parts of any size." },
-    { icon: Palette, title: "Precision Color Matching", description: "RAL, Pantone, or custom — we match your brand perfectly." },
-    { icon: Sparkles, title: "Special Effect Finishes", description: "Metallic, matte, gloss, textured — stand out with style." },
-    { icon: Shield, title: "Industrial-Grade Protection", description: "Corrosion & UV resistant coatings built to last." },
-  ];
-
-  const industries = [
-    { icon: Car, title: "Automotive" },
-    { icon: Factory, title: "Industrial" },
-    { icon: Sofa, title: "Furniture" },
-    { icon: Building, title: "Architecture" },
-  ];
-
-  const stats = [
-    { icon: Award, label: "Years Experience", value: "15+" },
-    { icon: Users, label: "Happy Clients", value: "500+" },
-    { icon: Star, label: "Projects Completed", value: "5000+" },
-    { icon: Clock, label: "On-Time Delivery", value: "98%" }
-  ];
-
-  const certifications = [
-    "ISO 9001:2015 Certified",
-    "Environmental Compliance",
-    "15+ Years Industry Experience",
-    "24/7 Customer Support"
-  ];
-
   return (
     <div className="overflow-x-hidden">
+      <SEO
+        title="Disha Powder Coating - Premium Metal Finishing in Mumbai"
+        description="Transform metal surfaces with durable, high-quality powder coating finishes. Serving automotive, industrial, furniture, and architectural sectors."
+      />
       {/* HERO SECTION */}
       <section className="relative w-full h-[85vh] sm:h-[90vh] md:h-screen overflow-hidden bg-black">
         <div className="absolute inset-0">

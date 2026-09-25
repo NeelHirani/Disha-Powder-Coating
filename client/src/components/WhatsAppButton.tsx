@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
+import { contactInfo } from "@/data/company";
 
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false);
-  const phoneNumber = "916351334789"; // Replace with actual number
+  const phoneNumber = contactInfo.whatsapp;
   const message = "Hi! I'm interested in powder coating services.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

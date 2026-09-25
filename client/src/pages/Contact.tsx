@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Card, CardContent, Button, Input, Textarea, Label, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/UIComponents";
+import { SEO } from "@/components/SEO";
 import { Phone, Mail, MapPin, Clock, Send, ArrowRight, Zap, MessageSquare } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
+import { contactInfo } from "@/data/company";
 
 export default function Contact() {
   const { toast } = useToast();
@@ -26,7 +28,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     setTimeout(() => {
       toast({
         title: "Message Sent!",
@@ -41,31 +43,35 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 98765 43210",
+      value: contactInfo.phone,
       color: "from-blue-500 to-blue-600"
     },
     {
       icon: Mail,
       title: "Email",
-      value: "info@dishapowdercoating.com",
+      value: contactInfo.email,
       color: "from-blue-500 to-blue-700"
     },
     {
       icon: MapPin,
       title: "Address",
-      value: "Industrial Area, Phase 2, Mumbai, Maharashtra 400001",
+      value: `${contactInfo.address.street}, ${contactInfo.address.city}, ${contactInfo.address.state} ${contactInfo.address.zip}`,
       color: "from-green-500 to-green-600"
     },
     {
       icon: Clock,
       title: "Business Hours",
-      value: "Mon-Sat: 9:00 AM - 6:00 PM",
+      value: contactInfo.hours,
       color: "from-purple-500 to-purple-600"
     }
   ];
 
   return (
     <div className="overflow-x-hidden">
+      <SEO
+        title="Contact Us - Get a Quote | Disha Powder Coating"
+        description="Contact Disha Powder Coating for inquiries, consultations, or project quotes. Located in Mumbai, Maharashtra. Fast 24-hour response."
+      />
       {/* HERO SECTION */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         {/* Background with gradient overlay */}

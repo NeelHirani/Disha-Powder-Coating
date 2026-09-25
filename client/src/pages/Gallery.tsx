@@ -1,100 +1,26 @@
 import { useState } from "react";
 import { Card, CardContent, Button, Badge, Dialog, DialogContent } from "@/components/UIComponents";
+import { SEO } from "@/components/SEO";
 import { X, ZoomIn, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import automotiveImage from "@assets/generated_images/Automotive_powder_coating_showcase_e1261c19.png";
-import furnitureImage from "@assets/generated_images/Furniture_powder_coating_example_2d9a40fe.png";
-import industrialImage from "@assets/generated_images/Industrial_machinery_coating_0f9db142.png";
-import architecturalImage from "@assets/generated_images/Architectural_coating_applications_c88831ed.png";
-import beforeAfterImage from "@assets/generated_images/Before_after_coating_comparison_9a2d0fe3.png";
-
-interface GalleryImageType {
-  src: string;
-  alt: string;
-  category: string;
-  title: string;
-  description: string;
-}
+import { categories, galleryImages as images, categoryColors, GalleryImage as GalleryImageType } from "@/data/gallery";
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedImage, setSelectedImage] = useState<GalleryImageType | null>(null);
 
-  const categories = ["All", "Automotive", "Industrial", "Furniture", "Architecture"];
-
-  const images = [
-    { 
-      src: automotiveImage, 
-      alt: "Automotive parts with glossy black powder coating", 
-      category: "Automotive",
-      title: "Automotive Parts Coating",
-      description: "Professional automotive parts with flawless glossy finish"
-    },
-    { 
-      src: furnitureImage, 
-      alt: "Modern furniture with matte black powder coated frames", 
-      category: "Furniture",
-      title: "Furniture Finishing",
-      description: "Modern furniture with elegant matte coating"
-    },
-    { 
-      src: industrialImage, 
-      alt: "Industrial machinery components with metallic powder coating", 
-      category: "Industrial",
-      title: "Industrial Equipment",
-      description: "Heavy-duty industrial machinery coating"
-    },
-    { 
-      src: architecturalImage, 
-      alt: "Architectural metal railings with weather-resistant coating", 
-      category: "Architecture",
-      title: "Architectural Railings",
-      description: "Weather-resistant architectural metalwork"
-    },
-    { 
-      src: beforeAfterImage, 
-      alt: "Before and after transformation showing powder coating quality", 
-      category: "Automotive",
-      title: "Transformation Showcase",
-      description: "Complete transformation with premium coating"
-    },
-    { 
-      src: automotiveImage, 
-      alt: "Automotive rims with custom color powder coating", 
-      category: "Automotive",
-      title: "Custom Rims",
-      description: "Custom colored automotive rims"
-    },
-    { 
-      src: industrialImage, 
-      alt: "Heavy duty equipment parts with protective coating", 
-      category: "Industrial",
-      title: "Heavy Duty Equipment",
-      description: "Protective coating for harsh environments"
-    },
-    { 
-      src: furnitureImage, 
-      alt: "Office furniture with sleek powder coated finish", 
-      category: "Furniture",
-      title: "Office Furniture",
-      description: "Sleek finishes for corporate environments"
-    },
-  ];
-
   const filteredImages = activeCategory === "All"
     ? images
     : images.filter(img => img.category === activeCategory);
 
-  const categoryColors: Record<string, string> = {
-    "Automotive": "from-blue-500 to-blue-600",
-    "Industrial": "from-blue-500 to-blue-700",
-    "Furniture": "from-green-500 to-green-600",
-    "Architecture": "from-purple-500 to-purple-600"
-  };
-
   return (
     <div className="overflow-x-hidden">
+      <SEO
+        title="Gallery - Powder Coating Portfolio | Disha Powder Coating"
+        description="Browse our portfolio of powder coating projects across automotive, industrial, furniture, and architectural applications. See our quality finishes."
+        keywords="powder coating gallery, coating portfolio, automotive coating, industrial coating, furniture coating, before after coating"
+      />
       {/* HERO SECTION */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         {/* Background with gradient overlay */}
@@ -173,9 +99,10 @@ export default function Gallery() {
                   onClick={() => setSelectedImage(image)}
                 >
                   <div className="relative overflow-hidden aspect-square bg-gray-200">
-                    <img 
-                      src={image.src} 
+                    <img
+                      src={image.src}
                       alt={image.alt}
+                      loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     {/* Gradient Overlay */}
@@ -241,9 +168,10 @@ export default function Gallery() {
               >
                 <Card className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-shadow">
                   <div className="relative">
-                    <img 
-                      src={image.src} 
+                    <img
+                      src={image.src}
                       alt={image.title}
+                      loading="lazy"
                       className="w-full h-64 object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-red-900/40 to-green-900/40"></div>

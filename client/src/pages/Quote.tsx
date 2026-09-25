@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Card, CardContent, Button, Input, Textarea, Label, Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/UIComponents";
+import { SEO } from "@/components/SEO";
 import { Upload, X, Send, CheckCircle, ArrowRight, FileUp } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -91,6 +92,10 @@ export default function Quote() {
 
   return (
     <div className="overflow-x-hidden">
+      <SEO
+        title="Request a Free Quote | Disha Powder Coating"
+        description="Get a fast, free powder coating quote for your project. Choose your service, upload drawings, and receive pricing within 24 hours."
+      />
       {/* HERO SECTION */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">

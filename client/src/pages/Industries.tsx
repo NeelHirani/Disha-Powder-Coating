@@ -1,4 +1,5 @@
 import { Card, CardContent, Button } from "@/components/UIComponents";
+import { SEO } from "@/components/SEO";
 import { Car, Factory, Sofa, Building, Wrench, ArrowRight, CheckCircle, Zap } from "lucide-react";
 import automotiveImage from "@assets/generated_images/Automotive_powder_coating_showcase_e1261c19.png";
 import furnitureImage from "@assets/generated_images/Furniture_powder_coating_example_2d9a40fe.png";
@@ -136,6 +137,10 @@ export default function Industries() {
 
   return (
     <div className="overflow-x-hidden">
+      <SEO
+        title="Industries We Serve - Automotive, Industrial, Furniture | Disha Powder Coating"
+        description="Professional powder coating services for automotive, industrial machinery, furniture, and architectural applications. Custom solutions for every industry."
+      />
       {/* HERO SECTION */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         {/* Background with gradient overlay */}

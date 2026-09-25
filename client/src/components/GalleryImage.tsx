@@ -20,6 +20,7 @@ export default function GalleryImage({ src, alt, category }: GalleryImageProps) 
         <img
           src={src}
           alt={alt}
+          loading="lazy"
           className="w-full h-64 object-cover transition-transform group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
