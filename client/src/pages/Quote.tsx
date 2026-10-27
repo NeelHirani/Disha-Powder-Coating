@@ -219,6 +219,7 @@ export default function Quote() {
                                   ? 'border-blue-500 bg-blue-50'
                                   : 'border-gray-200 hover:border-blue-300 bg-white'
                               }`}
+                              data-testid={`service-card-${option.value}`}
                             >
                               <h3 className="font-bold text-slate-900">{option.label}</h3>
                               <p className="text-sm text-gray-600 mt-1">{option.desc}</p>
