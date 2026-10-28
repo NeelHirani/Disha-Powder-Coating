@@ -1,0 +1,19 @@
+{
+  "enabledPlugins": {
+    "frontend-design@anthropic-plugin-directory": true,
+    "code-review-anthropics@anthropic-plugin-directory": true,
+    "code-simplifier@anthropic-plugin-directory": true,
+    "playwright@anthropic-plugin-directory": true,
+    "superpowers@anthropic-plugin-directory": true,
+    "figma@claude-plugins-official": true,
+    "chrome-devtools-mcp@claude-plugins-official": true,
+    "modern-web-guidance@claude-plugins-official": true,
+    "claude-memory@anthropic-plugin-directory": true,
+    "supabase@anthropic-plugin-directory": true,
+    "github@anthropic-plugin-directory": true,
+    "claude-md-management@anthropic-plugin-directory": true,
+    "vercel@anthropic-plugin-directory": true,
+    "feature-dev@anthropic-plugin-directory": true,
+    "context7@anthropic-plugin-directory": true
+  }
+}

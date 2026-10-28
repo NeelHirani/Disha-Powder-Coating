@@ -4,3 +4,9 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# Test artifacts
+test-results/
+playwright-report/
+TEST_RESULTS.md
+test-dashboard.html

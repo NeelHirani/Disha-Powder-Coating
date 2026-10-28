@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Card, CardContent, Button, Badge, Dialog, DialogContent } from "@/components/UIComponents";
 import { SEO } from "@/components/SEO";
 import { X, ZoomIn, ArrowRight } from "lucide-react";
@@ -10,9 +10,10 @@ export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedImage, setSelectedImage] = useState<GalleryImageType | null>(null);
 
-  const filteredImages = activeCategory === "All"
-    ? images
-    : images.filter(img => img.category === activeCategory);
+  const filteredImages = useMemo(() =>
+    activeCategory === "All" ? images : images.filter(img => img.category === activeCategory),
+    [activeCategory]
+  );
 
   return (
     <div className="overflow-x-hidden">
